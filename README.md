@@ -3,8 +3,8 @@
 У цьому репозиторії містяться матеріали курсу "Вступ до прикладного програмування в R". 
 Курс організовано як Blended Leanrning: колективна робота в аудиторіях та онлайн-кімнатах (google meet / zoom), самостійна робота студентів :man_student::woman_student:.
 
-![GitHub Logo](/images/r-intro-preview.jpg)
-Photo by Emile Perron: https://unsplash.com/photos/xrVDYZRGdw4
+![GitHub Logo](images/r-intro-preview.jpg)
+<small>_Photo by [https://unsplash.com/photos/xrVDYZRGdw4](Emile Perron from Unspash.com)_.<small>
 
 Технології та засоби навчання, що використовуються під час проходження курсу:
 - Сервіси:
