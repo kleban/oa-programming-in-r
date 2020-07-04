@@ -1,8 +1,9 @@
-# Вступ до прикладного програмування в R (Intro to practical R programming)
+# Вступ до прикладного програмування в R 
 
 У цьому репозиторії містяться матеріали курсу "Вступ до прикладного програмування в R". 
-Курс організовано як Blended Leanrning: колективна робота в аудиторіях та онлайн-кімнатах (google meet / zoom), самостійна робота студентів.
+Курс організовано як Blended Leanrning: колективна робота в аудиторіях та онлайн-кімнатах (google meet / zoom), самостійна робота студентів :man_student::woman_student:.
 
+![GitHub Logo](/images/r-intro-preview.jpg)
 Photo by Emile Perron: https://unsplash.com/photos/xrVDYZRGdw4
 
 Технології та засоби навчання, що використовуються під час проходження курсу:
