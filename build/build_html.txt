@@ -1,0 +1,7 @@
+cd e:/edu/oa-programming-in-r
+jupyter nbconvert e:/edu/oa-programming-in-r/Index.ipynb --template toc2
+jupyter nbconvert e:/edu/oa-programming-in-r/Lecture_1/Lecture-1-Intro-to-R.ipynb --template toc2
+jupyter nbconvert e:/edu/oa-programming-in-r/Lecture_2/Lecture-2-Basic-syntax-of-R.ipynb --template toc2
+jupyter nbconvert e:/edu/oa-programming-in-r/Lecture_3/Lecture-1-Intro-to-R.ipynb --template toc2
+jupyter nbconvert e:/edu/oa-programming-in-r/Lecture_4/Lecture-1-Intro-to-R.ipynb --template toc2
+jupyter nbconvert e:/edu/oa-programming-in-r/Lecture_5/Lecture-1-Intro-to-R.ipynb --template toc2
