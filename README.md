@@ -14,9 +14,11 @@
 </div>
 
 <h1>Зміст<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Загальна-інформація-про-курс" data-toc-modified-id="Загальна-інформація-про-курс-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Загальна інформація про курс</a></span></li><li><span><a href="#Використані-технології-та-сервіси" data-toc-modified-id="Використані-технології-та-сервіси-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Використані технології та сервіси</a></span></li><li><span><a href="#Лекції" data-toc-modified-id="Лекції-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Лекції</a></span></li><li><span><a href="#План-курсу" data-toc-modified-id="План-курсу-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>План курсу</a></span><ul class="toc-item"><li><span><a href="#Тиждень-1" data-toc-modified-id="Тиждень-1-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Тиждень 1</a></span></li></ul></li><li><span><a href="#Оцінювання" data-toc-modified-id="Оцінювання-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Оцінювання</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Загальна-інформація-про-курс" data-toc-modified-id="Загальна-інформація-про-курс-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Загальна інформація про курс</a></span></li><li><span><a href="#Використані-технології-та-сервіси" data-toc-modified-id="Використані-технології-та-сервіси-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Використані технології та сервіси</a></span></li><li><span><a href="#Лекції" data-toc-modified-id="Лекції-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Лекції</a></span><ul class="toc-item"><li><span><a href="#1.-Вступ-до-R-(-Notebook-версія,--html-версія)." data-toc-modified-id="1.-Вступ-до-R-(-Notebook-версія,--html-версія).-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>1. <strong>Вступ до R</strong> (<i class="fa fa-file-text-o"></i> <a href="https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_1" target="_blank">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="https://kleban.page/courses/r-intro/lecture_1/" target="_blank">html-версія</a>).</a></span></li><li><span><a href="#2.-Типи-даних-(-Notebook-версія,--html-версія)." data-toc-modified-id="2.-Типи-даних-(-Notebook-версія,--html-версія).-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>2. <strong>Типи даних</strong> (<i class="fa fa-file-text-o"></i> <a href="https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_2" target="_blank">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="https://kleban.page/courses/r-intro/lecture_2/" target="_blank">html-версія</a>).</a></span></li></ul></li><li><span><a href="#План-курсу" data-toc-modified-id="План-курсу-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>План курсу</a></span><ul class="toc-item"><li><span><a href="#Тиждень-1" data-toc-modified-id="Тиждень-1-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Тиждень 1</a></span></li></ul></li><li><span><a href="#Оцінювання" data-toc-modified-id="Оцінювання-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Оцінювання</a></span></li></ul></div>
 
 ## Загальна інформація про курс
+
+<div class="alert alert-danger"><span class="pull-left fa fa-warning" style="margin: 5px 10px 0 0">&nbsp;</span>Розділ у процесі наповнення.</div>
 
 Курс читається для студентів спеціальності економічна кібернетика першого року навчання у [Національному університеті "Острозька академія"](https://oa.edu.ua).
 
@@ -29,6 +31,7 @@
 
 Викладач: Юрій Клебан<br>
 >Сайт: [https://kleban.page](https://kleban.page)<br>
+Сторінка курсу: [https://kleban.page/courses/r-intro](https://kleban.page/courses/r-intro)<br>
     LinkedIn: [https://linkedin.com/in/ykleban](https://www.linkedin.com/in/ykleban)<br>
     Facebook: [https://www.facebook.com/ykleban](https://www.facebook.com/ykleban)<br>
     Email: yuriy.kleban@oa.edu.ua (університет), y.kleban@intelsofttech.com (IntelSoft Tech)
@@ -36,6 +39,8 @@
 
 ---
 ## Використані технології та сервіси
+
+<div class="alert alert-danger"><span class="pull-left fa fa-warning" style="margin: 5px 10px 0 0">&nbsp;</span>Розділ у процесі наповнення.</div>
 
 Для успішного проходження курсу взаємодія між учасниками процесу відбуватиметься з використанням ряду технологій, зокрема:
 
@@ -67,6 +72,8 @@
 ---
 ## Лекції
 
+<div class="alert alert-danger"><span class="pull-left fa fa-warning" style="margin: 5px 10px 0 0">&nbsp;</span>Розділ у процесі наповнення.</div>
+
 Варто звернути увагу, що лекційні та практичні матеріали курсу реалізовані у форму документів [`Jupyter Notebook`](https://jupyter.org/), що дозволяє переглянути теоретичний матеріал та швидко запустити виконуваний код за допомогою ряду програмного забезпечення як, наприклад:
 
 * [Anaconda](https://www.anaconda.com/). _Як інсталювати `Anaconda` та запустити описано у ***Лекції 1***_.
@@ -75,18 +82,23 @@
 
 Подібних сервісів для запуску коду на різних мовах програмування на даний момент є дотстаньо, наприклад, [C# notebook online](https://uk.lmgtfy.com/?q=C%23+notebook+online).
 
-Також зверніть увагу, що усі матеріали розміщені на [GitHub](https://github.com/), тому Ви можете зробити `clone` усіх матеріалів і 
+Також зверніть увагу, що усі лекції розміщені на [GitHub](https://github.com/), тому Ви можете зробити `clone` усіх матеріалів і запускати їх локально чи на `Google Colab` у `Jupyter Noteboook`-ах.
 
-1. **Вступ до R** (<i class="fa fa-file-text-o"></i> [Notebook-версія](), <i class="fa fa-file-code-o"></i> [html-версія](), <i class="fa fa-file-pdf-o"></i> [pdf-версія]()).
-1. **Типи даних** (<i class="fa fa-file-text-o"></i> [Notebook-версія](), <i class="fa fa-file-code-o"></i> [html-версія](), <i class="fa fa-file-pdf-o"></i> [pdf-версія]()).
+### 1. **Вступ до R** (<i class="fa fa-file-text-o"></i> [Notebook-версія](https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_1), <i class="fa fa-file-code-o"></i> [html-версія](https://kleban.page/courses/r-intro/lecture_1/)).
+### 2. **Типи даних** (<i class="fa fa-file-text-o"></i> [Notebook-версія](https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_2), <i class="fa fa-file-code-o"></i> [html-версія](https://kleban.page/courses/r-intro/lecture_2/)<!--, <i class="fa fa-file-pdf-o"></i> [pdf-версія]()-->).
+
+
+<!--
 1. **Оператори** (<i class="fa fa-file-text-o"></i> [Notebook-версія](), <i class="fa fa-file-code-o"></i> [html-версія](), <i class="fa fa-file-pdf-o"></i> [pdf-версія]()).
 1. **Читання та запис файлів** (<i class="fa fa-file-text-o"></i> [Notebook-версія](), <i class="fa fa-file-code-o"></i> [html-версія](), <i class="fa fa-file-pdf-o"></i> [pdf-версія]()).
-1. **Ще якась тема, думаю** (<i class="fa fa-file-text-o"></i> [Notebook-версія](), <i class="fa fa-file-code-o"></i> [html-версія](), <i class="fa fa-file-pdf-o"></i> [pdf-версія]()).
+1. **Ще якась тема, думаю** (<i class="fa fa-file-text-o"></i> [Notebook-версія](), <i class="fa fa-file-code-o"></i> [html-версія](), <i class="fa fa-file-pdf-o"></i> [pdf-версія]()).-->
 
 ---
 ## План курсу
 
-Курс розділений на 8 тижнів навчального процесу.<br>
+<div class="alert alert-danger"><span class="pull-left fa fa-warning" style="margin: 5px 10px 0 0">&nbsp;</span>Розділ у процесі наповнення.</div>
+
+Курс розділений на X тижнів навчального процесу.<br>
 <small><i>* Конкретні дати буду вказані на початку або в процесі проходження курсу</i></small>.
 
 ### Тиждень 1
@@ -120,7 +132,4 @@ _Примітка. Скорочена назва курсу **Intro-to-R**_. К�
 ---
 ## Оцінювання
 
-
-```R
-
-```
+<div class="alert alert-danger"><span class="pull-left fa fa-warning" style="margin: 5px 10px 0 0">&nbsp;</span>Розділ у процесі наповнення.</div>

@@ -13084,7 +13084,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "\u041f\u043b\u0430\u043d", "title_sidebar": "\u0417\u043c\u0456\u0441\u0442", "toc_cell": true, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "\u0417\u043c\u0456\u0441\u0442", "title_sidebar": "\u0417\u043c\u0456\u0441\u0442", "toc_cell": true, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13099,6 +13099,25 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><div style="float:left; width: 250px">
+    <img src="../images/lecture_view.png" class="img-thumbnail; width: 250px;" alt="" />
+</div></p>
+<p><div style= "margin: 0 0 0 270px"></p>
+<h1  style="margin-top: 0;" class="text-muted">Курс: Вступ до прикладного програмування в R</h1><ol>
+<li><p><strong>Вступ до R</strong> (<i class="fa fa-file-text-o"></i> <a href="https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_1">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="lecture_1/">html-версія</a>).</p>
+</li>
+<li><p><strong>Базовий синтаксис R</strong> (<i class="fa fa-file-text-o"></i> <a href="https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_2">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="lecture_2/">html-версія</a><!--, <i class="fa fa-file-pdf-o"></i> [pdf-версія]()-->).
+<br style="clear:both"></p>
+</li>
+</ol>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="&#1051;&#1077;&#1082;&#1094;&#1110;&#1103;-1.-&#1042;&#1089;&#1090;&#1091;&#1087;-&#1076;&#1086;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;-&#1074;-R">&#1051;&#1077;&#1082;&#1094;&#1110;&#1103; 1. &#1042;&#1089;&#1090;&#1091;&#1087; &#1076;&#1086; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103; &#1074; R<a class="anchor-link" href="#&#1051;&#1077;&#1082;&#1094;&#1110;&#1103;-1.-&#1042;&#1089;&#1090;&#1091;&#1087;-&#1076;&#1086;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;-&#1074;-R">&#182;</a></h1>
 </div>
 </div>
@@ -13106,7 +13125,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>План<span class="tocSkip"></span></h1></p>
+<p><h1>Зміст<span class="tocSkip"></span></h1></p>
 <div class="toc"><ul class="toc-item"><li><span><a href="#Що-таке-R?" data-toc-modified-id="Що-таке-R?-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Що таке R?</a></span></li><li><span><a href="#Історія-створення-R" data-toc-modified-id="Історія-створення-R-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Історія створення R</a></span></li><li><span><a href="#Інсталяція-та-налаштування-R" data-toc-modified-id="Інсталяція-та-налаштування-R-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Інсталяція та налаштування R</a></span><ul class="toc-item"><li><span><a href="#Завантаження-та-інсталяція-R" data-toc-modified-id="Завантаження-та-інсталяція-R-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Завантаження та інсталяція R</a></span></li><li><span><a href="#Перший-запуск-R-GUI" data-toc-modified-id="Перший-запуск-R-GUI-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Перший запуск R GUI</a></span></li><li><span><a href="#Завантаження-та-інсталяція-R-Studio-Desktop" data-toc-modified-id="Завантаження-та-інсталяція-R-Studio-Desktop-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Завантаження та інсталяція R Studio Desktop</a></span></li><li><span><a href="#Створення-першого-проекту-в-R-Studio" data-toc-modified-id="Створення-першого-проекту-в-R-Studio-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>Створення першого проекту в R Studio</a></span></li></ul></li><li><span><a href="#Використані-джерела" data-toc-modified-id="Використані-джерела-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Використані джерела</a></span></li></ul></div>
 </div>
 </div>
@@ -13210,32 +13229,6 @@ $( document ).ready(function(){
 </div>
 </div>
 </div>1. https://www.quantargo.com/courses/course-r-introduction
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
     </div>
   </div>
 </body>

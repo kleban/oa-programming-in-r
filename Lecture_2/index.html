@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Index</title>
+<title>Lecture-2-Basic-syntax-of-R</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13084,7 +13084,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "\u0417\u043c\u0456\u0441\u0442", "title_sidebar": "\u0417\u043c\u0456\u0441\u0442", "toc_cell": true, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "267.391px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "\u041f\u043b\u0430\u043d", "title_sidebar": "Contents", "toc_cell": true, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13099,7 +13099,18 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1>План курсу "Вступ до прикладного програмування в R". <br><small>версія 1.0</small></h1>
+<p><div style="float:left; width: 250px">
+    <img src="../images/lecture_view.png" class="img-thumbnail; width: 250px;" alt="" />
+</div></p>
+<p><div style= "margin: 0 0 0 270px"></p>
+<h1  style="margin-top: 0;" class="text-muted">Курс: Вступ до прикладного програмування в R</h1><ol>
+<li><p><strong>Вступ до R</strong> (<i class="fa fa-file-text-o"></i> <a href="https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_1">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="https://kleban.page/courses/r-intro/lecture_1/">html-версія</a>).</p>
+</li>
+<li><p><strong>Базовий синтаксис R</strong> (<i class="fa fa-file-text-o"></i> <a href="https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_2">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="https://kleban.page/courses/r-intro/lecture_2/">html-версія</a><!--, <i class="fa fa-file-pdf-o"></i> [pdf-версія]()-->).
+<br style="clear:both"></p>
+</li>
+</ol>
+<hr>
 
 </div>
 </div>
@@ -13107,10 +13118,63 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><div style="height: 200px; background: url(images/r-intro-preview.jpg) bottom center; background-size:cover"></div>
-<!--
-![Intro to R](images/r-intro-preview.jpg "Title")
---></p>
+<h1 id="&#1051;&#1077;&#1082;&#1094;&#1110;&#1103;-2.-&#1041;&#1072;&#1079;&#1086;&#1074;&#1080;&#1081;-&#1089;&#1080;&#1085;&#1090;&#1072;&#1082;&#1089;&#1080;&#1089;-R">&#1051;&#1077;&#1082;&#1094;&#1110;&#1103; 2. &#1041;&#1072;&#1079;&#1086;&#1074;&#1080;&#1081; &#1089;&#1080;&#1085;&#1090;&#1072;&#1082;&#1089;&#1080;&#1089; R<a class="anchor-link" href="#&#1051;&#1077;&#1082;&#1094;&#1110;&#1103;-2.-&#1041;&#1072;&#1079;&#1086;&#1074;&#1080;&#1081;-&#1089;&#1080;&#1085;&#1090;&#1072;&#1082;&#1089;&#1080;&#1089;-R">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h1>План<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Базові-типи-даних" data-toc-modified-id="Базові-типи-даних-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Базові типи даних</a></span></li><li><span><a href="#Математичні-функції" data-toc-modified-id="Математичні-функції-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Математичні функції</a></span></li><li><span><a href="#Оператори" data-toc-modified-id="Оператори-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Оператори</a></span><ul class="toc-item"><li><span><a href="#Арифметичні-оператори" data-toc-modified-id="Арифметичні-оператори-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Арифметичні оператори</a></span></li></ul></li><li><span><a href="#Оголошення-та-ініціалізація-змінних" data-toc-modified-id="Оголошення-та-ініціалізація-змінних-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Оголошення та ініціалізація змінних</a></span><ul class="toc-item"><li><span><a href="#Поняття-змінних-та-оператор-присвоєння" data-toc-modified-id="Поняття-змінних-та-оператор-присвоєння-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Поняття змінних та оператор присвоєння</a></span></li><li><span><a href="#Правила-іменування-змінних" data-toc-modified-id="Правила-іменування-змінних-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Правила іменування змінних</a></span></li></ul></li><li><span><a href="#Введення-виведння-даних" data-toc-modified-id="Введення-виведння-даних-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Введення-виведння даних</a></span></li><li><span><a href="#Список-джерел:" data-toc-modified-id="Список-джерел:-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Список джерел:</a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1041;&#1072;&#1079;&#1086;&#1074;&#1110;-&#1090;&#1080;&#1087;&#1080;-&#1076;&#1072;&#1085;&#1080;&#1093;">&#1041;&#1072;&#1079;&#1086;&#1074;&#1110; &#1090;&#1080;&#1087;&#1080; &#1076;&#1072;&#1085;&#1080;&#1093;<a class="anchor-link" href="#&#1041;&#1072;&#1079;&#1086;&#1074;&#1110;-&#1090;&#1080;&#1087;&#1080;-&#1076;&#1072;&#1085;&#1080;&#1093;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1052;&#1072;&#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1095;&#1085;&#1110;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1110;&#1111;">&#1052;&#1072;&#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1095;&#1085;&#1110; &#1092;&#1091;&#1085;&#1082;&#1094;&#1110;&#1111;<a class="anchor-link" href="#&#1052;&#1072;&#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1095;&#1085;&#1110;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1110;&#1111;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1054;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;">&#1054;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;<a class="anchor-link" href="#&#1054;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1085;&#1110;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;">&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1085;&#1110; &#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;<a class="anchor-link" href="#&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1085;&#1110;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>R</code> можна використовувати як звичайни калькулятор.</p>
+<p>Розглянемо набір звичних арифметичних операторів, що відомі з початкової школи:</p>
+<ul>
+<li>Додавання: <code>+</code>.</li>
+<li>Віднімання: <code>-</code>.</li>
+<li>Ділення: <code>/</code>.</li>
+<li>Множення: <code>*</code>.</li>
+</ul>
+<p>А також більш складні оператори:</p>
+<ul>
+<li>Піднесення до степеня: <code>^</code> (вводиться з клавіатури як <code>Shift+6</code> на ENG-розкладці клавіатури).</li>
+<li>Остача від ділення (ще може називатися "ділення по модулю"): <code>%%</code> (вводиться з клавіатури як <code>Shift+5</code>).</li>
+<li>Ділення націло: <code>%/%</code>.</li>
+</ul>
 
 </div>
 </div>
@@ -13118,47 +13182,577 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-warning">
-    <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
-    <div style="margin: 0 0 0 40px">
-    Якщо Ви знайшли помилку, неточність або некоректні твердження прошу описати проблему на <code><i class='fa fa-github'></i> github</code>:<br>
-    <a href="https://github.com/kleban/oa-programming-in-r/issues">https://github.com/kleban/oa-programming-in-r/issues</a>
+<p>Розглянемо приклад <strong>додавання</strong> чисел:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">5</span> <span class="o">+</span> <span class="m">7</span>
+</pre></div>
+
     </div>
 </div>
 </div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+12
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">5</span> <span class="o">+</span> <span class="m">4</span> <span class="o">+</span> <span class="m">15</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+24
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="p">(</span><span class="m">5</span> <span class="o">+</span> <span class="m">8</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="m">4</span> <span class="o">+</span> <span class="m">9</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+26
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-info"><i class="fa fa-question"></i> <i>Примітка</i>. Використання "круглих" дужок у математичних виразах має пріоритет аналогічний до загальноприйнятих у математиці.</div>
+</div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Зміст<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Загальна-інформація-про-курс" data-toc-modified-id="Загальна-інформація-про-курс-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Загальна інформація про курс</a></span></li><li><span><a href="#Використані-технології-та-сервіси" data-toc-modified-id="Використані-технології-та-сервіси-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Використані технології та сервіси</a></span></li><li><span><a href="#Лекції" data-toc-modified-id="Лекції-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Лекції</a></span></li><li><span><a href="#План-курсу" data-toc-modified-id="План-курсу-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>План курсу</a></span><ul class="toc-item"><li><span><a href="#Тиждень-1" data-toc-modified-id="Тиждень-1-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Тиждень 1</a></span></li></ul></li><li><span><a href="#Оцінювання" data-toc-modified-id="Оцінювання-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Оцінювання</a></span></li></ul></div>
+<p>Розглянемо приклад <strong>віднімання</strong> чисел:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">47</span> <span class="o">-</span> <span class="m">21</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+26
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">15</span> <span class="o">-</span> <span class="p">(</span><span class="m">10</span> <span class="o">-</span> <span class="m">25</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+30
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-info"><i class="fa fa-question"></i> <i>Примітка</i>. Заміна знаків до/в "дужках" тут працює так само як працювала у  школі :)</div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1047;&#1072;&#1075;&#1072;&#1083;&#1100;&#1085;&#1072;-&#1110;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103;-&#1087;&#1088;&#1086;-&#1082;&#1091;&#1088;&#1089;">&#1047;&#1072;&#1075;&#1072;&#1083;&#1100;&#1085;&#1072; &#1110;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103; &#1087;&#1088;&#1086; &#1082;&#1091;&#1088;&#1089;<a class="anchor-link" href="#&#1047;&#1072;&#1075;&#1072;&#1083;&#1100;&#1085;&#1072;-&#1110;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103;-&#1087;&#1088;&#1086;-&#1082;&#1091;&#1088;&#1089;">&#182;</a></h2>
+<p>Приклади <strong>множення</strong> чисел:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">5</span> <span class="o">*</span> <span class="m">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+15
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">5</span> <span class="o">*</span> <span class="p">(</span><span class="m">2</span> <span class="o">+</span> <span class="m">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+35
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Приклади <strong>ділення</strong> чисел:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">12</span> <span class="o">/</span> <span class="m">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+6
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="p">(</span><span class="m">4</span> <span class="o">+</span> <span class="m">7</span><span class="p">)</span> <span class="o">/</span> <span class="m">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+3.66666666666667
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Піднесення до степеня</strong> за допомогю оператора <code>^</code> є досить простим. Так, наприклад, <code>3^2</code> дорівнює 9, а <code>2^3</code> -  це <code>2*2*2</code> і дорівнює 8.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">5</span><span class="o">^</span><span class="m">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+25
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="p">(</span><span class="m">1+3</span><span class="p">)</span><span class="o">^</span><span class="m">3</span> <span class="o">+</span> <span class="m">100</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+164
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Остача від ділення</strong> дозволяє знайти залишок одного числа від ділення на інше число.</p>
+<p>Наприклад, остача від ділення націло 5 на 2 дорівнює 1, бо <code>2 * 2 (=4) + 1 = 5</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">28</span> <span class="o">%%</span> <span class="m">7</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+0
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">17</span><span class="o">%%</span><span class="m">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+2
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Ділння націло</strong> залишає лише цілу частину від ідленнядвох чисел:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">28</span> <span class="o">%/%</span> <span class="m">7</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+4
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="m">17</span><span class="o">%/%</span><span class="m">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+3
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1054;&#1075;&#1086;&#1083;&#1086;&#1096;&#1077;&#1085;&#1085;&#1103;-&#1090;&#1072;-&#1110;&#1085;&#1110;&#1094;&#1110;&#1072;&#1083;&#1110;&#1079;&#1072;&#1094;&#1110;&#1103;-&#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;">&#1054;&#1075;&#1086;&#1083;&#1086;&#1096;&#1077;&#1085;&#1085;&#1103; &#1090;&#1072; &#1110;&#1085;&#1110;&#1094;&#1110;&#1072;&#1083;&#1110;&#1079;&#1072;&#1094;&#1110;&#1103; &#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;<a class="anchor-link" href="#&#1054;&#1075;&#1086;&#1083;&#1086;&#1096;&#1077;&#1085;&#1085;&#1103;-&#1090;&#1072;-&#1110;&#1085;&#1110;&#1094;&#1110;&#1072;&#1083;&#1110;&#1079;&#1072;&#1094;&#1110;&#1103;-&#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Курс читається для студентів спеціальності економічна кібернетика першого року навчання у <a href="https://oa.edu.ua">Національному університеті "Острозька академія"</a>.</p>
-<p>Курс базується на принципах <a href="https://en.wikipedia.org/wiki/Blended_learning">blended learning</a>: спільна робота в аудиторіях, спільна робота в online-кімнатах та чатах, самостійна робота студентів над вивченням додаткових матеріалів курсу.</p>
-<p>Інформація:</p>
-<blockquote><p>Спеціальність: економічна кібернетика<br>
-Шифр спеціальності: 1111.0000<br>
-Курс: 1-й<br></p>
-</blockquote>
-<p>Викладач: Юрій Клебан<br></p>
-<blockquote><p>Сайт: <a href="https://kleban.page">https://kleban.page</a><br>
-    LinkedIn: <a href="https://www.linkedin.com/in/ykleban">https://linkedin.com/in/ykleban</a><br>
-    Facebook: <a href="https://www.facebook.com/ykleban">https://www.facebook.com/ykleban</a><br>
-    Email: yuriy.kleban@oa.edu.ua (університет), y.kleban@intelsofttech.com (IntelSoft Tech)</p>
-</blockquote>
+<h3 id="&#1055;&#1086;&#1085;&#1103;&#1090;&#1090;&#1103;-&#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;-&#1090;&#1072;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;-&#1087;&#1088;&#1080;&#1089;&#1074;&#1086;&#1108;&#1085;&#1085;&#1103;">&#1055;&#1086;&#1085;&#1103;&#1090;&#1090;&#1103; &#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093; &#1090;&#1072; &#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088; &#1087;&#1088;&#1080;&#1089;&#1074;&#1086;&#1108;&#1085;&#1085;&#1103;<a class="anchor-link" href="#&#1055;&#1086;&#1085;&#1103;&#1090;&#1090;&#1103;-&#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;-&#1090;&#1072;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;-&#1087;&#1088;&#1080;&#1089;&#1074;&#1086;&#1108;&#1085;&#1085;&#1103;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Базовим поняттям практично усіх мов програмування є <strong>змінна</strong>. Змінна дозволяє записати значення або об'єкт та назвати його для подальшого доступу, зміни, видалення по імені.</p>
+<p>Наприклад, присвоєння змінній <code>my_variable</code> значення <code>10</code> записується так: <code>my_variable &lt;- 5</code> або <code>my_variable = 5</code>.</p>
+<p>Операція надання змінній певного значення у програмуванні називається <strong>присвоєнням</strong>.</p>
+<p><em>Важливо! Зверніть увагу, що присвоєння (<code>&lt;-</code>, <code>=</code>) та рівність (<code>==</code>) це різні поняття. Оператор <code>==</code> здіснює перевірку співпадіння значення двох змінних/об'єктів та повертає результат у вигляді логічного значення <code>TRUE</code> (якщо значення рівні) або <code>FALSE</code> (якщо значення не рівні)</em>.</p>
+<p>Знак <code>&lt;-</code> не є часто використовуваним у різних мовах програмування, зазвичай для присвоєння користуються <code>=</code>. Проте в R освновним способом засобом початкової ініціалізації змінних є <code>&lt;-</code>.</p>
+<p><em>Також у програмуванні на R використовуються оператори присвоєння <code>&lt;&lt;-</code>, <code>-&gt;</code>, <code>-&gt;&gt;</code>. Про них можна прочитати за лыками нижче.</em></p>
 
 </div>
 </div>
@@ -13166,40 +13760,72 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="&#1042;&#1080;&#1082;&#1086;&#1088;&#1080;&#1089;&#1090;&#1072;&#1085;&#1110;-&#1090;&#1077;&#1093;&#1085;&#1086;&#1083;&#1086;&#1075;&#1110;&#1111;-&#1090;&#1072;-&#1089;&#1077;&#1088;&#1074;&#1110;&#1089;&#1080;">&#1042;&#1080;&#1082;&#1086;&#1088;&#1080;&#1089;&#1090;&#1072;&#1085;&#1110; &#1090;&#1077;&#1093;&#1085;&#1086;&#1083;&#1086;&#1075;&#1110;&#1111; &#1090;&#1072; &#1089;&#1077;&#1088;&#1074;&#1110;&#1089;&#1080;<a class="anchor-link" href="#&#1042;&#1080;&#1082;&#1086;&#1088;&#1080;&#1089;&#1090;&#1072;&#1085;&#1110;-&#1090;&#1077;&#1093;&#1085;&#1086;&#1083;&#1086;&#1075;&#1110;&#1111;-&#1090;&#1072;-&#1089;&#1077;&#1088;&#1074;&#1110;&#1089;&#1080;">&#182;</a></h2>
+<div class="alert alert-success">
+    <span class="fa fa-link fa-3x pull-left"></span>
+    <div style="margin-left:70px">
+        Рекомендую почитати про різницю між операторами присвоєння у R <code>&lt;-</code> та <code>=</code> тут: 
+
+ 1. [Why do we use arrow as an assignment operator? (Colin FAY)](https://colinfay.me/r-assignment/).
+ 2. [Difference between assignment operators in R (Ren Kun)](https://renkun.me/2014/01/28/difference-between-assignment-operators-in-r/).
+ 3. [Assignment Operators](https://stat.ethz.ch/R-manual/R-devel/library/base/html/assignOps.html).
+
+</div></div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Для успішного проходження курсу взаємодія між учасниками процесу відбуватиметься з використанням ряду технологій, зокрема:</p>
-<p><strong>Організація навчального процесу:</strong></p>
+<p>Розглянемо приклад:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">x</span> <span class="o">&lt;-</span> <span class="m">45</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="m">10</span>
+<span class="n">z</span> <span class="o">&lt;-</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="c1"># z = 45 + 10</span>
+<span class="n">z</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+55
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Розберемо приклад, описаний вище:</p>
 <ul>
-<li><strong>MOOC Moodle</strong> 
-<br><em>Сайт:</em> <a href="moodle.oa.edu.ua">moodle.oa.edu.ua</a>
-<br><em>Опис:</em> Текст<br><br></li>
-<li><strong>Edux.Grades</strong> 
-<br><em>Сайт:</em> <a href="grades.oa.edu.ua">grades.oa.edu.ua</a>
-<br><em>Опис:</em> Текст<br><br></li>
-</ul>
-<p><strong>Взаємодія між учасниками курсу:</strong></p>
-<ul>
-<li><strong>Google Meet</strong> </li>
-<li><strong>Zoom</strong> 
-<br><em>Сайт:</em> <a href="moodle.oa.edu.ua">moodle.oa.edu.ua</a>
-<br><em>Опис:</em> Текст<br><br></li>
-</ul>
-<p><strong>Публікація матеріалів курсу:</strong>:</p>
-<ul>
-<li><strong>GitHub</strong> Repository - jupyter notebook + pdf versions</li>
-</ul>
-<p><strong>Технології та засоби кодування:</strong>:</p>
-<ul>
-<li><strong>R</strong></li>
-<li><strong>R Studio Desktop</strong></li>
-<li><strong>Anaconda (+Jupyter Notebook)</strong></li>
+<li>У першому рядку оголошується змінна <code>x</code> і їй присвоюється значення <code>45</code>.</li>
+<li>У другому рядку оголошується змінна <code>y</code> і їй присвоюється значення <code>10</code>.</li>
+<li>У третьому рядку оголошується змінна <code>z</code> і їй присвоюється значення суми <code>x</code> + <code>y</code>. <br>
+<small><i>`#` у R використовується як коментар коду, текст написаний після нього ігнорується.</i></small></li>
+<li>У четвертому рядку відбувається виведення на консоль змінної <code>z</code>.</li>
 </ul>
 
 </div>
@@ -13208,7 +13834,20 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/icons-flow.jpg" alt="Tech Flows :)" title="Title"></p>
+<h3 id="&#1055;&#1088;&#1072;&#1074;&#1080;&#1083;&#1072;-&#1110;&#1084;&#1077;&#1085;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;-&#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;">&#1055;&#1088;&#1072;&#1074;&#1080;&#1083;&#1072; &#1110;&#1084;&#1077;&#1085;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103; &#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;<a class="anchor-link" href="#&#1055;&#1088;&#1072;&#1074;&#1080;&#1083;&#1072;-&#1110;&#1084;&#1077;&#1085;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;-&#1079;&#1084;&#1110;&#1085;&#1085;&#1080;&#1093;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Є кілька основних правил іменування змінних у R:</p>
+<ol>
+<li>Ім'я змінної може складатися з <strong>букв</strong> [a-z, A-z], <strong>цифр</strong> [0-9], <strong>крапки</strong> <code>.</code> та нижнього <strong>підкреслювання</strong> <code>_</code>.</li>
+<li>Ім'я змінної повинно починатися з <strong>букви або крапки</strong>. Якщо воно починається з крапки, то наступним символом повинна бути буква.</li>
+<li>Не можна використовувати зарезервовані ключові слова мови програмування для іменування змінних, наприклад, <code>TRUE</code>/<code>FALSE</code>.</li>
+</ol>
+<p>Ім'я змінної не може містити пробіл (<code>space</code>). Якщо є потреба назвати об'єкт кількома словами, то їх зазвичай розділяють підкресленням <code>_</code> або крапкою <code>.</code>. Наприклад, змінну можна назвати <code>my_variable_name</code> або <code>my.variable.name</code>. Назва <code>myVariableName</code> (<a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>) теж буде коректно сприйнята мовою програмування R, проте такий запис тут вживається не часто.</p>
 
 </div>
 </div>
@@ -13216,21 +13855,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="&#1051;&#1077;&#1082;&#1094;&#1110;&#1111;">&#1051;&#1077;&#1082;&#1094;&#1110;&#1111;<a class="anchor-link" href="#&#1051;&#1077;&#1082;&#1094;&#1110;&#1111;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Варто звернути увагу, що лекційні та практичні матеріали курсу реалізовані у форму документів <a href="https://jupyter.org/"><code>Jupyter Notebook</code></a>, що дозволяє переглянути теоретичний матеріал та швидко запустити виконуваний код за допомогою ряду програмного забезпечення як, наприклад:</p>
-<ul>
-<li><a href="https://www.anaconda.com/">Anaconda</a>. <em>Як інсталювати <code>Anaconda</code> та запустити описано у <strong><em>Лекції 1</em></strong></em>.</li>
-<li><a href="https://colab.research.google.com/">Google Collab</a> - сервіс для роботи <code>Jupyter Notebooks</code> від Google.</li>
-<li><a href="https://www.kaggle.com/notebooks">Kaggle Notebooks</a> - сервіс для змагань з Data Science та Machine Learning, має гарну імплементацію роботи з "ноутбуками" також.</li>
-</ul>
-<p>Подібних сервісів для запуску коду на різних мовах програмування на даний момент є дотстаньо, наприклад, <a href="https://uk.lmgtfy.com/?q=C%23+notebook+online">C# notebook online</a>.</p>
+<p><span class="text-success">Приклад коректного іменування змінних:</span> <code>total</code>, <code>zminna</code>, <code>Sum</code>, <code>.length_of_something</code>, <code>Number123, x_1</code>.</p>
 
 </div>
 </div>
@@ -13238,8 +13863,42 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Також зверніть увагу, що усі матеріали розміщені на <a href="https://github.com/">GitHub</a>, тому Ви можете зробити <code>clone</code> усіх матеріалів і</p>
+<p><span class="text-danger">Приклад неправильного іменування змінних:</span> <code>tot@l</code>, <code>5x_1</code>, <code>_variable</code>, <code>FALSE</code>, <code>.0ne</code>.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1085;&#1103;-&#1074;&#1080;&#1074;&#1077;&#1076;&#1085;&#1085;&#1103;-&#1076;&#1072;&#1085;&#1080;&#1093;">&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1085;&#1103;-&#1074;&#1080;&#1074;&#1077;&#1076;&#1085;&#1085;&#1103; &#1076;&#1072;&#1085;&#1080;&#1093;<a class="anchor-link" href="#&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1085;&#1103;-&#1074;&#1080;&#1074;&#1077;&#1076;&#1085;&#1085;&#1103;-&#1076;&#1072;&#1085;&#1080;&#1093;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1057;&#1087;&#1080;&#1089;&#1086;&#1082;-&#1076;&#1078;&#1077;&#1088;&#1077;&#1083;:">&#1057;&#1087;&#1080;&#1089;&#1086;&#1082; &#1076;&#1078;&#1077;&#1088;&#1077;&#1083;:<a class="anchor-link" href="#&#1057;&#1087;&#1080;&#1089;&#1086;&#1082;-&#1076;&#1078;&#1077;&#1088;&#1077;&#1083;:">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13247,11 +13906,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li><strong>Вступ до R</strong> (<i class="fa fa-file-text-o"></i> <a href="">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="">html-версія</a>, <i class="fa fa-file-pdf-o"></i> <a href="">pdf-версія</a>).</li>
-<li><strong>Типи даних</strong> (<i class="fa fa-file-text-o"></i> <a href="">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="">html-версія</a>, <i class="fa fa-file-pdf-o"></i> <a href="">pdf-версія</a>).</li>
-<li><strong>Оператори</strong> (<i class="fa fa-file-text-o"></i> <a href="">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="">html-версія</a>, <i class="fa fa-file-pdf-o"></i> <a href="">pdf-версія</a>).</li>
-<li><strong>Читання та запис файлів</strong> (<i class="fa fa-file-text-o"></i> <a href="">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="">html-версія</a>, <i class="fa fa-file-pdf-o"></i> <a href="">pdf-версія</a>).</li>
-<li><strong>Ще якась тема, думаю</strong> (<i class="fa fa-file-text-o"></i> <a href="">Notebook-версія</a>, <i class="fa fa-file-code-o"></i> <a href="">html-версія</a>, <i class="fa fa-file-pdf-o"></i> <a href="">pdf-версія</a>).</li>
+<li>Coursera. R Programming. URL: <a href="https://www.coursera.org/learn/r-programming/">https://www.coursera.org/learn/r-programming/</a></li>
 </ol>
 
 </div>
@@ -13260,52 +13915,8 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="&#1055;&#1083;&#1072;&#1085;-&#1082;&#1091;&#1088;&#1089;&#1091;">&#1055;&#1083;&#1072;&#1085; &#1082;&#1091;&#1088;&#1089;&#1091;<a class="anchor-link" href="#&#1055;&#1083;&#1072;&#1085;-&#1082;&#1091;&#1088;&#1089;&#1091;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Курс розділений на 8 тижнів навчального процесу.<br>
-<small><i>* Конкретні дати буду вказані на початку або в процесі проходження курсу</i></small>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1058;&#1080;&#1078;&#1076;&#1077;&#1085;&#1100;-1">&#1058;&#1080;&#1078;&#1076;&#1077;&#1085;&#1100; 1<a class="anchor-link" href="#&#1058;&#1080;&#1078;&#1076;&#1077;&#1085;&#1100;-1">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Завдання 1. Вивчення теоретичного матеріалу лекцій 1 та 2.</p>
-<p>Завдання 2. Реєстрація на курс <strong>Вступ до прикладного програмування в R</strong> у системі <a href="https://moodle.oa.edu.ua">moodle.oa.edu.ua</a>.<br>
-<em>Примітка. Скорочена назва курсу <strong>Intro-to-R</strong></em>. Ключове слово <strong>ek-intro-to-r-*</strong> (останній символ викладач підкаже).</p>
-<p>Завдання 3. Реєстрація на курси у системі DataCamp:</p>
-<ul>
-<li><a href="">Introduction to R</a></li>
-<li><a href="">Intermediate R</a></li>
-<li><a href="">Intermediate R Practice</a></li>
-</ul>
-<p>Пройти теми на DataCamp з курсу <a href="">Introduction to R</a>:</p>
 <ol>
-<li>Тема 1</li>
-<li>Тема 2</li>
-<li>Тема 3</li>
-<li>Тема 4</li>
-</ol>
-<p>Опрацювати метеріали статей:</p>
-<ol>
-<li>Стаття 1</li>
-<li>Стаття 2</li>
-<li>Стаття 3</li>
-<li>Стаття 4</li>
+<li>Datacamp. Introduction to R. URL: <a href="https://campus.datacamp.com/courses/free-introduction-to-r">https://campus.datacamp.com/courses/free-introduction-to-r</a></li>
 </ol>
 
 </div>
@@ -13314,8 +13925,20 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="&#1054;&#1094;&#1110;&#1085;&#1102;&#1074;&#1072;&#1085;&#1085;&#1103;">&#1054;&#1094;&#1110;&#1085;&#1102;&#1074;&#1072;&#1085;&#1085;&#1103;<a class="anchor-link" href="#&#1054;&#1094;&#1110;&#1085;&#1102;&#1074;&#1072;&#1085;&#1085;&#1103;">&#182;</a></h2>
+<ol>
+<li>Quantargo. R Introduction. URL: <a href="https://www.quantargo.com/courses/course-r-introduction">https://www.quantargo.com/courses/course-r-introduction</a></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Datamentor. R programming. Url: <a href="https://www.datamentor.io/r-programming/">https://www.datamentor.io/r-programming/</a></li>
+</ol>
+
 </div>
 </div>
 </div>

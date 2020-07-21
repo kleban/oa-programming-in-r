@@ -1,3 +1,15 @@
+<div style="float:left; width: 250px">
+    <img src="../images/lecture_view.png" class="img-thumbnail; width: 250px;" alt="" />
+</div>
+<div style= "margin: 0 0 0 270px">
+<h1  style="margin-top: 0;" class="text-muted">Курс: Вступ до прикладного програмування в R</h1>
+
+1. **Вступ до R** (<i class="fa fa-file-text-o"></i> [Notebook-версія](https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_1), <i class="fa fa-file-code-o"></i> [html-версія](https://kleban.page/courses/r-intro/lecture_1/)).
+
+2. **Базовий синтаксис R** (<i class="fa fa-file-text-o"></i> [Notebook-версія](https://github.com/kleban/oa-programming-in-r/tree/master/Lecture_2), <i class="fa fa-file-code-o"></i> [html-версія](https://kleban.page/courses/r-intro/lecture_2/)<!--, <i class="fa fa-file-pdf-o"></i> [pdf-версія]()-->).
+<br style="clear:both">
+---
+
 # Лекція 2. Базовий синтаксис R
 
 <h1>План<span class="tocSkip"></span></h1>
